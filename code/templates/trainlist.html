@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content%}
+<body id="contents">
+
+<h1>장애인고용포털 청각장애인 훈련과정</h1>
+<div class="card-body" style="padding-right: 150px;padding-left: 150px;">
+    <table class="table" style="color:white;">
+        <thead>
+        <tr>
+            <th scope="col">훈련명</th>
+            <th scope="col">훈련기관</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in trainlist %}
+        <tr>
+            <td>{{trainlist[i]['훈련명']}}</td>
+            <td>{{ trainlist[i]['등록기관'] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+
+{% endblock %}

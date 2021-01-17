@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content%}
+<!--<script src="{{url_for('static', filename = 'report.js')}}"></script>-->
+<script src="./static/js/report.js"></script>
+<body id="contents">
+<div class = "reprot-result" style="font-size:80px;text-align:center;margin-top:20%;">{{x}}</div>
+<div style="display:none;">
+    <img id="photo">
+    <canvas id="canvasElement"></canvas>
+    <video autoplay="true" id="videoElement" ></video>
+</div>
+</body>
+{% endblock %}

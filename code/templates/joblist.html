@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content%}
+<body id="text-align:center; margin-top:10%">
+<h1>서울시 일자리</h1>
+<div class="card-body" style="padding-right: 150px;padding-left: 150px;">
+    <table class="table" style="color:white;">
+        <thead>
+        <tr>
+            <th scope="col">기업명</th>
+            <th scope="col">구인제목</th>
+            <th scope="col">급여</th>
+            <th scope="col">희망경력</th>
+            <th scope="col">근무지역</th>
+            <th scope="col">마감일</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in company_name %}
+        <tr>
+            <td>{{company_name[i]['기업명']}}</td>
+            <td>{{company_name[i]['구인제목']}}</td>
+            <td>{{company_name[i]['급여']}}</td>
+            <td>{{company_name[i]['희망경력']}}</td>
+            <td>{{company_name[i]['근무지역']}}</td>
+            <td>{{company_name[i]['마감일']}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+
+{% endblock %}

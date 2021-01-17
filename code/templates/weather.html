@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<script src="{{url_for('static', filename = 'js/weather.js')}}"></script>
+<body id="contents">
+
+<p style="font-size:60px;text-align:center;margin-top:4%;">오늘의 날씨입니다.</p>
+<div class='weather-top-container'>
+
+	<div class='row upper-weather-container'>
+		<div class='col-lg weather-current-icon' style="margin-top:5%;margin-left:20%;"><img style="width:60%" src="" id='weather-current-img'></div>
+		<div class='col-lg weather-current-temp' style="font-size:250px;text-align:center;margin-right:20%;"></div>
+	</div>
+
+	<div class="row" id="weekly_time">
+		<div class='col-sm time0'></div>
+		<div class='col-sm time1'></div>
+		<div class='col-sm time2'></div>
+		<div class='col-sm time3'></div>
+		<div class='col-sm time4'></div>
+		<div class='col-sm time5'></div>
+
+	</div>
+
+	<div class="row" id="weekly_time">
+		<div class='col-sm time0_hightemp'></div>
+		<div class='col-sm time1_hightemp'></div>
+		<div class='col-sm time2_hightemp'></div>
+		<div class='col-sm time3_hightemp'></div>
+		<div class='col-sm time4_hightemp'></div>
+		<div class='col-sm time5_hightemp'></div>
+	</div>
+
+	<div class="row" id="weekly_time">
+		<div class='col-sm time0_lowtemp'></div>
+		<div class='col-sm time1_lowtemp'></div>
+		<div class='col-sm time2_lowtemp'></div>
+		<div class='col-sm time3_lowtemp'></div>
+		<div class='col-sm time4_lowtemp'></div>
+		<div class='col-sm time5_lowtemp'></div>
+	</div>
+
+	<div class="row" id="weekly_time">
+		<div class='col-sm time0_icon'><img style="width:15%" src="" id='time0-img'></div>
+		<div class='col-sm time1_icon'><img style="width:15%" src="" id='time1-img'></div>
+		<div class='col-sm time2_icon'><img style="width:15%" src="" id='time2-img'></div>
+		<div class='col-sm time3_icon'><img style="width:15%" src="" id='time3-img'></div>
+		<div class='col-sm time4_icon'><img style="width:15%" src="" id='time4-img'></div>
+		<div class='col-sm time5_icon'><img style="width:15%" src="" id='time5-img'></div>
+	</div>
+</div>
+
+</div>
+
+<div style="display:none;">
+	<img id="photo">
+	<canvas id="canvasElement"></canvas>
+	<video autoplay="true" id="videoElement" ></video>
+</div>
+
+</body>
+
+{% endblock %}

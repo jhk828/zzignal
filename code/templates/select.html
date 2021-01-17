@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content%}
+<style>
+    select {
+        margin-left: 10%;
+    }
+</style>
+<body style="text-align:center; margin-top:10%">
+<h1> 버전을 선택해 주세요</h1>
+<div class="row">
+    <div class="col">
+        <div class="card-deck mb-3 text-center" style="margin-top:15%;margin-left:40%;width:50%;">
+            <div class="card mb-4 shadow-sm" style="background-color:black;">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">단축키 버전</h4>
+                </div>
+                <div class="card-body">
+                    1번 단축키
+                    <select name="option">
+                        <option value="none">=== 선택 ===</option>
+                        <option value="korean">날씨</option>
+                        <option value="english">뉴스</option>
+                        <option value="chinese">캘린더</option>
+                        <option value="spanish">신고</option>
+                    </select>
+                    <br>
+                    <br>
+                    2번 단축키
+                    <select name="option" >
+                        <option value="none">=== 선택 ===</option>
+                        <option value="korean">날씨</option>
+                        <option value="english">뉴스</option>
+                        <option value="chinese">캘린더</option>
+                         <option value="spanish">신고</option>
+                    </select>
+                    <br>
+                    <br>
+                    3번 단축키
+                    <select name="option" >
+                        <option value="none">=== 선택 ===</option>
+                        <option value="korean">날씨</option>
+                        <option value="english">뉴스</option>
+                        <option value="chinese">캘린더</option>
+                         <option value="spanish">신고</option>
+                    </select>
+                    <br>
+                    <br>
+                    4번 단축키
+                    <select name="option" >
+                        <option value="none">=== 선택 ===</option>
+                        <option value="korean">날씨</option>
+                        <option value="english">뉴스</option>
+                        <option value="chinese">캘린더</option>
+                         <option value="spanish">신고</option>
+                    </select>
+                </div>
+                <button type="button" onclick="location.href='/index'" class="btn btn-lg btn-block btn-outline-primary" >확인</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card-deck mb-3 text-center" style="margin-top:15%;width:50%;margin-left:10%">
+            <div class="card mb-4 shadow-sm" style="background-color:black;">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">수화 버전</h4>
+                </div>
+                <div class="card-body">
+                    <img src="https://t1.daumcdn.net/cfile/blog/216BE54252B7A3C521" width="290px">
+                </div>
+                <button type="button" onclick="location.href='/index2'" class="btn btn-lg btn-block btn-outline-primary" >확인</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+{% endblock %}

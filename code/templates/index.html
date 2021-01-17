@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content%}
+<script src="{{url_for('static', filename = 'js/clock.js')}}"></script>
+<body onload="printClock()" id="contents">
+<div class="row">
+    <div class="col" id="clock"></div>
+</div>
+<div id="result">
+</div>
+
+<div class="row">
+    <div class="col" style="text-align: center;">
+
+        <img id="photo">
+
+        <div style="display:none;">
+            <video autoplay="true" id="videoElement" ></video>
+            <canvas id="canvasElement"></canvas>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col" style="text-align: center;">
+        <h2>단축키 버전입니다.</h2>
+        <h2>시작을 하시려면 0을 표시하세요.</h2>
+    </div>
+</div>
+
+</body>
+{% endblock %}

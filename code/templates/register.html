@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content%}
+<body>
+<div class="container">
+    <div class="card-deck mb-3 text-center" style="margin-top:15%; margin-left:35%; width:30%;">
+        <div class="card mb-4 shadow-sm" style="background-color:black;">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">회원가입</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" >
+                    {{form.csrf_token}}
+                    <div class="row">
+                        <div class="form-group col">
+                            {{form.userid.label("아이디")}}
+                            {{form.userid(class="form-control", placeholder="아이디")}}
+                        </div>
+                        <div class="form-group col">
+                            {{form.username.label("사용자 이름")}}
+                            {{form.username(class="form-control", placeholder="사용자 이름")}}
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col">
+                            {{form.password.label("비밀번호")}}
+                            {{form.password(class="form-control", placeholder="비밀번호")}}
+                        </div>
+                        <div class="form-group col">
+                            {{form.re_password.label("비밀번호 확인")}}
+                            {{form.re_password(class="form-control", placeholder="비밀번호 확인")}}
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            {{form.gender.label("성별")}}
+                            {{form.gender(class="form-control", placeholder="성별")}}
+                        </div>
+
+                        <div class="form-group col">
+                            {{form.age.label("나이")}}
+                            {{form.age(class="form-control", placeholder="나이")}}
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        {{form.address.label("주소")}}
+                        {{form.address(class="form-control", placeholder="주소")}}
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-lg btn-block btn-outline-primary">제출</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+{% endblock %}
